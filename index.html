@@ -32,7 +32,7 @@
       </section>
       <section class="dashboardContainer_fileSystemExplorer">
         <article class="col colOne">
-          <h2>Browser</h2>
+          <h2>Directories</h2>
           <div class="colContainer colContainerOne">
             <ul class="tree">
               <li>
@@ -44,7 +44,7 @@
                       <details open>
                         <summary><i class="fa-solid fa-folder"></i><span>Third tier</span></summary>
                         <ul class="margin-left">
-                          <li><i class="fa-solid fa-folder"></i><span>First Item</span></li>
+                          <li id="activeDirectory"><i class="fa-solid fa-folder"></i><span>First Item</span></li>
                           <li><i class="fa-solid fa-folder"></i><span>Second Item</span></li>
                           <li><i class="fa-solid fa-folder"></i><span>Another Item</span></li>
                         </ul>
@@ -77,10 +77,10 @@
           </div>
         </article>
         <article class="col colTwo">
-          <h2>List</h2>
+          <h2>Files</h2>
           <div class="colContainer colContainerTwo">
             <ul>
-              <li>
+              <li id="activeDirectory">
                 <i class="fa-solid fa-file-pdf"></i> <a href="">PDF.pdf</a>
               </li>
               <li>

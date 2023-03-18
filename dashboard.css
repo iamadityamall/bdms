@@ -136,13 +136,13 @@ body {
 }
 
 .colContainerTwo > ul {
-  display:grid;
+  display: grid;
   row-gap: 1rem;
 }
 
 .colContainerTwo > ul > li {
   padding: 1rem;
-  background: #E9EDC9;
+  background: #e9edc9;
   border-radius: var(--border-radius);
 }
 
@@ -181,14 +181,13 @@ li {
   list-style: none;
 }
 
-.margin-left{
+.margin-left {
   margin-left: 1rem;
 }
 
 .tree summary {
   cursor: pointer;
 }
-
 
 .tree summary i {
   color: orange;
@@ -248,6 +247,11 @@ ul.tree > li:after {
   display: none;
 }
 
+#activeDirectory {
+  background: #e4dccf !important;
+  border-radius: var(--border-radius);
+}
+
 @media screen and (min-width: 768px) {
   /* ================================== */
   /* Dashboard Button Container */
@@ -267,7 +271,7 @@ ul.tree > li:after {
 
   .dashboardContainer_fileSystemExplorer {
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr 1fr;
+    grid-template-columns: auto auto 1fr;
     grid-template-areas: "a b c";
   }
   .colContainerThree {
