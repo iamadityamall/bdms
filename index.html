@@ -1,27 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./dashboard.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
     <main class="dashboardContainer">
-        <section class="dashboardContainer_gridButtons">
-            <button class="buttonOne button" type="button">Create folder</button>
-            <button class="buttonTwo button" type="button">Create workspace</button>
-            <button class="buttonThree button" type="button">Upload Document</button>
-            <button class="buttonFour button" type="button">Create agreement</button>
-            <button class="buttonFive button" type="button">Document pending for approval</button>
-            <button class="buttonSix button" type="button">Document Search</button>
-        </section>
-        <section class="dashboardContainer_fileSystemExplorer">
-            <article>filesystem tree</article>
-            <article>files name</article>
-            <article>pdf reader</article>
-        </section>
+      <section class="dashboardContainer_gridButtons">
+        <button class="buttonOne button" type="button">Create folder</button>
+        <button class="buttonTwo button" type="button">Create workspace</button>
+        <button class="buttonThree button" type="button">
+          Upload Document
+        </button>
+        <button class="buttonFour button" type="button">
+          Create agreement
+        </button>
+        <button class="buttonFive button" type="button">
+          Document pending for approval
+        </button>
+        <button class="buttonSix button" type="button">Document Search</button>
+      </section>
+      <section class="dashboardContainer_fileSystemExplorer">
+        <article class="col colOne">
+          <h2>Browser</h2>
+          <div class="colContainer colContainerOne">
+            <ul>
+              <li>
+                home
+                <ul>
+                  <li>aditya</li>
+                  <li>aditya</li>
+                  <li>aditya</li>
+                  <li>aditya</li>
+                </ul>
+              </li>
+              <li>ubuntu</li>
+            </ul>
+          </div>
+        </article>
+        <article class="col colTwo">
+          <h2>List</h2>
+          <div class="colContainer colContainerTwo">
+            <ul>
+              <li><i class="fa-solid fa-file-pdf"></i> <span>PDF.pdf</span></li>
+              <li><i class="fa-solid fa-file-pdf"></i> <span>PDF.pdf</span></li>
+              <li><i class="fa-solid fa-file-pdf"></i> <span>PDF.pdf</span></li>
+              <li><i class="fa-solid fa-file-pdf"></i> <span>PDF.pdf</span></li>
+            </ul>
+          </div>
+        </article>
+        <article class="col colThree">
+          <h2>Preview</h2>
+          <div class="colContainer colContainerThree">
+            <h4>File Name: <span>PDF.pdf</span></h4>
+            <iframe
+              src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf"
+              frameborder="2"
+              width="100%"
+              height="700px"
+            ></iframe>
+          </div>
+        </article>
+      </section>
     </main>
-</body>
+  </body>
 </html>

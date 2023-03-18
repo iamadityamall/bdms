@@ -7,7 +7,7 @@
 }
 
 :root {
-  --primary-color: #C9EEFF;
+  --primary-color: #c9eeff;
   --secondary-color: red;
   --ternary-color: #ea5455;
   --padding-one: 2rem;
@@ -24,6 +24,9 @@ body {
   font-family: var(--font-primary);
 }
 
+/* ================================== */
+/* Dashboard Container */
+/* ================================== */
 .dashboardContainer {
   width: 100vw;
   min-height: 100vh;
@@ -31,6 +34,9 @@ body {
   grid-template-rows: auto 1fr;
 }
 
+/* ================================== */
+/* Dashboard Button Container */
+/* ================================== */
 .dashboardContainer_gridButtons {
   padding: var(--padding-one);
   display: grid;
@@ -42,8 +48,7 @@ body {
     "c"
     "d"
     "e"
-    "f"
-  ;
+    "f";
 }
 
 .button {
@@ -68,7 +73,6 @@ body {
   text-decoration: none;
 }
 
-
 .buttonOne {
   grid-area: a;
 }
@@ -88,4 +92,56 @@ body {
 }
 .buttonSix {
   grid-area: f;
+}
+
+/* ================================== */
+/* FilesystemExplorer Container */
+/* ================================== */
+.dashboardContainer_fileSystemExplorer {
+  padding: var(--padding-one);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.col {
+  background: var(--button-color); 
+}
+
+.col > h2 {
+  background: var(--ternary-color);
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.colContainer{
+  padding: var(--padding-one);
+  align-self: center;
+}
+
+
+.colContainerThree {
+  display: grid;
+  row-gap: 1rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  /* ================================== */
+  /* Dashboard Button Container */
+  /* ================================== */
+  .dashboardContainer_gridButtons {
+    justify-self: center;
+    align-self: center;
+    padding: var(--padding-one);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: none;
+    grid-template-areas:
+      "a b c"
+      "d e f";
+  }
 }
