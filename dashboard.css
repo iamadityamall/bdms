@@ -125,6 +125,7 @@ body {
   padding: 2rem;
   display: grid;
   row-gap: 1rem;
+  overflow-y: scroll;
 }
 
 #preview {
