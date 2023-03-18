@@ -98,7 +98,6 @@ body {
 /* FilesystemExplorer Container */
 /* ================================== */
 .dashboardContainer_fileSystemExplorer {
-  padding: var(--padding-one);
   display: grid;
   grid-template-rows: auto 1fr;
 }
