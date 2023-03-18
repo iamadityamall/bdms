@@ -122,6 +122,7 @@ body {
 
 
 .colContainerThree {
+  padding: 2rem;
   display: grid;
   row-gap: 1rem;
 }
