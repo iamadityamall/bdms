@@ -98,12 +98,26 @@ body {
 /* ================================== */
 .dashboardContainer_fileSystemExplorer {
   display: grid;
-  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "a" "b" "c";
 }
 
 .col {
   display: grid;
-  background: var(--button-color); 
+  grid-template-rows: auto 1fr;
+  background: var(--button-color);
+  border: 1px solid black;
+}
+
+.colOne {
+  grid-area: a;
+}
+
+.colTwo {
+  grid-area: b;
+}
+.colThree {
+  grid-area: c;
 }
 
 .col > h2 {
@@ -113,13 +127,42 @@ body {
   text-align: center;
   color: #fff;
   letter-spacing: 1px;
+  align-self: flex-start;
+  border-bottom: 2px solid black;
 }
 
-.colContainer{
+.colContainer {
   padding: var(--padding-one);
-  align-self: center;
 }
 
+.colContainerTwo > ul {
+  display:grid;
+  row-gap: 1rem;
+}
+
+.colContainerTwo > ul > li {
+  padding: 1rem;
+  background: #E9EDC9;
+  border-radius: var(--border-radius);
+}
+
+.colContainerTwo > ul > li:hover {
+  transition: all 0.2s linear;
+  transform: scale(1.01);
+  border-radius: 0px;
+  box-shadow: var(--box-shadow-light);
+}
+
+.colContainerThree > ul > li > span {
+  text-decoration: underline;
+}
+
+.colContainerTwo > ul > li > i {
+  color: red;
+  padding: 0.25rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
 
 .colContainerThree {
   padding: 2rem;
@@ -138,6 +181,73 @@ li {
   list-style: none;
 }
 
+.margin-left{
+  margin-left: 1rem;
+}
+
+.tree summary {
+  cursor: pointer;
+}
+
+
+.tree summary i {
+  color: orange;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+}
+
+.tree summary::marker {
+  display: none;
+}
+
+.tree summary::marker {
+  display: none;
+}
+
+.tree ul {
+  line-height: 2rem;
+}
+
+.tree ul li {
+  position: relative;
+  /* outline: 1px solid green; */
+}
+
+.tree ul li i {
+  color: orange;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+}
+
+.tree ul li::before {
+  position: absolute;
+  left: -10px;
+  top: 0;
+  border-left: 2px solid gray;
+  border-bottom: 2px solid gray;
+  content: "";
+  width: 8px;
+  height: 1rem;
+}
+
+.tree ul li::after {
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  border-left: 2px solid gray;
+  content: "";
+  width: 8px;
+  height: 100%;
+}
+
+.tree ul li:last-child::after {
+  display: none;
+}
+
+ul.tree > li:after {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   /* ================================== */
   /* Dashboard Button Container */
@@ -153,5 +263,24 @@ li {
     grid-template-areas:
       "a b c"
       "d e f";
+  }
+
+  .dashboardContainer_fileSystemExplorer {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+    grid-template-areas: "a b c";
+  }
+  .colContainerThree {
+    grid-template-rows: auto 1fr;
+    overflow-y: hidden;
+  }
+
+  .col > h2 {
+    text-align: left;
+    padding-left: var(--padding-one);
+  }
+
+  #preview {
+    height: 100%;
   }
 }
