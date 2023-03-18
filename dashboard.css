@@ -28,7 +28,6 @@ body {
 /* Dashboard Container */
 /* ================================== */
 .dashboardContainer {
-  width: 100vw;
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -99,10 +98,11 @@ body {
 /* ================================== */
 .dashboardContainer_fileSystemExplorer {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
 }
 
 .col {
+  display: grid;
   background: var(--button-color); 
 }
 
@@ -131,6 +131,11 @@ body {
 #preview {
   width: 100% !important;
   height: 600px;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
 }
 
 @media screen and (min-width: 768px) {
