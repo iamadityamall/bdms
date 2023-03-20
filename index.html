@@ -15,21 +15,84 @@
     />
   </head>
   <body>
+    <aside class="sidebarMenuContainer">
+      <nav class="companyLogo">
+        <figure>
+          <img src="./assests/images/idbi_intech_logo.jpg" alt="company-logo" />
+        </figure>
+      </nav>
+      <article class="profileSummary">
+        <figure>
+          <img src="./assests/images/profile-pic.jpg" alt="user-profile-pic" />
+        </figure>
+        <div class="profileSummary_headings">
+          <h3>Martha Brown</h3>
+          <h6>Marketing Director</h6>
+        </div>
+      </article>
+      <article class="sidemenuContainer">
+        <ul>
+          <li class="activeSidemenu">Dashboard</li>
+          <li>Insights</li>
+          <li>Reports</li>
+          <li>Channels</li>
+          <li>Settings</li>
+        </ul>
+      </article>
+      <footer class="buttonContainer">
+        <button type="button" onclick="alert('hello world')">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </button>
+      </footer>
+    </aside>
     <main class="dashboardContainer">
-      <section class="dashboardContainer_gridButtons">
-        <button class="buttonOne button" type="button">Create folder</button>
-        <button class="buttonTwo button" type="button">Create workspace</button>
-        <button class="buttonThree button" type="button">
-          Upload Document
-        </button>
-        <button class="buttonFour button" type="button">
-          Create agreement
-        </button>
-        <button class="buttonFive button" type="button">
-          Document pending for approval
-        </button>
-        <button class="buttonSix button" type="button">Document Search</button>
+      <section class="ibdmsContainer">
+        <article class="ibdms">
+          <h2>Welcome Martha,</h2>
+          <h3>i-BDMS Center:</h3>
+          <span style="color: #02a793; font-weight: bold"
+            >Your documents are secured on blockchain</span
+          >
+          <h6>Last Document Edited: <span>PDF.pdf</span></h6>
+          <h6>Last Document Edited on: <span>12/12/2022</span></h6>
+          <h6>Last Document Edited By: <span>John Doe</span></h6>
+          <h6>
+            Current Private Key: <span>922547e866c89b8f677312df0ccec8ee</span>
+          </h6>
+        </article>
+        <article class="dashboardContainer_gridButtons">
+          <button class="buttonOne button" type="button">Create folder</button>
+          <button class="buttonTwo button" type="button">
+            Create workspace
+          </button>
+          <button class="buttonThree button" type="button">
+            Upload Document
+          </button>
+          <button class="buttonFour button" type="button">
+            Create agreement
+          </button>
+          <button class="buttonFive button" type="button">
+            Document pending for approval
+          </button>
+          <div class="searchDocumentContainer">
+            <input
+              id="searchDocument"
+              style="cursor: text"
+              type="text"
+              placeholder="Document Search"
+            />
+            <button
+              type="button"
+              id="searchButton"
+              onclick="alert('you clicked hello world')"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </article>
       </section>
+
       <section class="dashboardContainer_fileSystemExplorer">
         <article class="col colOne">
           <h2>Directories</h2>
@@ -37,35 +100,32 @@
             <ul class="tree">
               <li>
                 <details open>
-                  <summary><i class="fa-solid fa-folder"></i><span>First Item</span></summary>
+                  <summary>
+                    <i class="fa-solid fa-folder"></i><span>First Item</span>
+                  </summary>
                   <ul class="margin-left">
-                    <li><i class="fa-solid fa-folder"></i><span>First Item</span></li>
                     <li>
-                      <details open>
-                        <summary><i class="fa-solid fa-folder"></i><span>Third tier</span></summary>
-                        <ul class="margin-left">
-                          <li id="activeDirectory"><i class="fa-solid fa-folder"></i><span>First Item</span></li>
-                          <li><i class="fa-solid fa-folder"></i><span>Second Item</span></li>
-                          <li><i class="fa-solid fa-folder"></i><span>Another Item</span></li>
-                        </ul>
-                      </details>
+                      <i class="fa-solid fa-folder"></i><span>First Item</span>
                     </li>
-                  </ul>
-                </details>
-              </li>
-              
-              <li>
-                <details open>
-                  <summary><i class="fa-solid fa-folder"></i><span>Second Item</span></summary>
-                  <ul class="margin-left">
-                    <li><i class="fa-solid fa-folder"></i><span>First Item</span></li>
                     <li>
                       <details open>
-                        <summary><i class="fa-solid fa-folder"></i><span>Third tier</span></summary>
+                        <summary>
+                          <i class="fa-solid fa-folder"></i
+                          ><span>Third tier</span>
+                        </summary>
                         <ul class="margin-left">
-                          <li><i class="fa-solid fa-folder"></i><span>First Item</span></li>
-                          <li><i class="fa-solid fa-folder"></i><span>Second Item</span></li>
-                          <li><i class="fa-solid fa-folder"></i><span>Another Item</span></li>
+                          <li id="activeDirectory">
+                            <i class="fa-solid fa-folder"></i
+                            ><span>First Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Second Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Another Item</span>
+                          </li>
                         </ul>
                       </details>
                     </li>
@@ -73,6 +133,40 @@
                 </details>
               </li>
 
+              <li>
+                <details open>
+                  <summary>
+                    <i class="fa-solid fa-folder"></i><span>Second Item</span>
+                  </summary>
+                  <ul class="margin-left">
+                    <li>
+                      <i class="fa-solid fa-folder"></i><span>First Item</span>
+                    </li>
+                    <li>
+                      <details open>
+                        <summary>
+                          <i class="fa-solid fa-folder"></i
+                          ><span>Third tier</span>
+                        </summary>
+                        <ul class="margin-left">
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>First Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Second Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Another Item</span>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
             </ul>
           </div>
         </article>
