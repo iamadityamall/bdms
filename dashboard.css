@@ -118,6 +118,8 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "a" "b" "c";
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .col {
@@ -424,7 +426,7 @@ ul.tree > li:after {
     overflow: hidden;
     align-self: center;
     justify-self: center;
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1px 1px var(--secondary-color);
   }
 
   .profileSummary_headings {
@@ -442,6 +444,7 @@ ul.tree > li:after {
   }
 
   .sidemenuContainer ul li {
+    margin-bottom: 5px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     cursor: pointer;
