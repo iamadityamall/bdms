@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>i-BDMS Center</title>
     <link rel="stylesheet" href="./dashboard.css" />
     <link
       rel="stylesheet"
@@ -12,6 +12,10 @@
       integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
     />
   </head>
   <body>
@@ -30,7 +34,27 @@
           <h6>Marketing Director</h6>
         </div>
       </article>
-      <article class="sidemenuContainer">
+      <article class="bars">
+        <p>Pending Approval</p>
+        <div class="container">
+          <div class="skills html">90%</div>
+        </div>
+        <p>Pending Review</p>
+        <div class="container">
+          <div class="skills css">80%</div>
+        </div>
+
+        <p>Completed</p>
+        <div class="container">
+          <div class="skills js">65%</div>
+        </div>
+
+        <p>Rejected</p>
+        <div class="container">
+          <div class="skills php">60%</div>
+        </div>
+      </article>
+      <!-- <article class="sidemenuContainer">
         <ul>
           <li class="activeSidemenu">Dashboard</li>
           <li>Insights</li>
@@ -38,7 +62,7 @@
           <li>Channels</li>
           <li>Settings</li>
         </ul>
-      </article>
+      </article> -->
       <footer class="buttonContainer">
         <button type="button" onclick="alert('hello world')">
           <i class="fa-solid fa-right-from-bracket"></i>
@@ -62,7 +86,13 @@
           </h6>
         </article>
         <article class="dashboardContainer_gridButtons">
-          <button class="buttonOne button" type="button">Create folder</button>
+          <button
+            class="buttonOne button"
+            id="createWorkIdButton"
+            type="button"
+          >
+            Create Work ID
+          </button>
           <button class="buttonTwo button" type="button">
             Create workspace
           </button>
@@ -101,13 +131,13 @@
               <li>
                 <details open>
                   <summary>
-                    <i class="fa-solid fa-folder"></i><span>First Item</span>
+                    <i class="fa-solid fa-folder"></i><span>IDBIIntech</span>
                   </summary>
-                  <ul class="margin-left">
-                    <li>
+                  <ul class="margin-left" id="directories">
+                    <!-- <li>
                       <i class="fa-solid fa-folder"></i><span>First Item</span>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                       <details open>
                         <summary>
                           <i class="fa-solid fa-folder"></i
@@ -128,12 +158,12 @@
                           </li>
                         </ul>
                       </details>
-                    </li>
+                    </li> -->
                   </ul>
                 </details>
               </li>
 
-              <li>
+              <!-- <li>
                 <details open>
                   <summary>
                     <i class="fa-solid fa-folder"></i><span>Second Item</span>
@@ -166,15 +196,57 @@
                     </li>
                   </ul>
                 </details>
-              </li>
+              </li> -->
             </ul>
           </div>
         </article>
         <article class="col colTwo">
+          <h2>Work ID'S</h2>
+          <div class="colContainer colContainerOne">
+            <ul class="tree" id="tree">
+              <!-- <li>
+                <details open>
+                  <summary>
+                    <i class="fa-solid fa-folder"></i><span>Second Item</span>
+                  </summary>
+                  <ul class="margin-left">
+                    <li>
+                      <i class="fa-solid fa-folder"></i><span>First Item</span>
+                    </li>
+                    <li>
+                      <details open>
+                        <summary>
+                          <i class="fa-solid fa-folder"></i
+                          ><span>Third tier</span>
+                        </summary>
+                        <ul class="margin-left">
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>First Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Second Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Another Item</span>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li> -->
+            </ul>
+          </div>
+        </article>
+        <article class="col colThree">
           <h2>Files</h2>
-          <div class="colContainer colContainerTwo">
-            <ul>
-              <li id="activeDirectory">
+          <div class="colContainer colContainerTwo" id="filesList">
+            <!-- <h6 id="emptyFolder">No files present</h6> -->
+            <ul id="files">
+              <!-- <li id="activeDirectory">
                 <i class="fa-solid fa-file-pdf"></i> <a href="">PDF.pdf</a>
               </li>
               <li>
@@ -186,21 +258,219 @@
               </li>
               <li>
                 <i class="fa-solid fa-file-pdf"></i> <a href="">PDF.pdf</a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </article>
-        <article class="col colThree">
+        <article class="col colFour">
           <h2>Preview</h2>
           <div class="colContainer colContainerThree">
-            <h4>File Name: <span>PDF.pdf</span></h4>
-            <iframe
-              id="preview"
-              src="https://www.africau.edu/images/default/sample.pdf"
-            ></iframe>
+            <h4>File Name: <span id="fileNamePreview">PDF.pdf</span></h4>
+            <iframe id="preview" name="preview" src=""></iframe>
           </div>
         </article>
       </section>
     </main>
+
+    <aside class="createWorkId" id="createWorkId">
+      <form class="createWorkIdSection" id="workidform">
+        <button
+          type="button"
+          class="closeWorkIdSectionButton"
+          id="closeWorkIdSectionButton"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <article class="createWorkIdLeft">
+          <div class="inputContainerOne">
+            <div class="box boxOne">
+              <label for="">Finacle Reference Number</label>
+              <input type="text" readonly name="finacleReferenceNumber" />
+            </div>
+            <div class="box boxTwo">
+              <label for="">Registration Number</label>
+              <input
+                type="text"
+                value="TF-0000001004-IDBI"
+                readonly
+                name="registrationNumber"
+              />
+            </div>
+            <div class="box boxtThree">
+              <label for="">Unique Reference Number</label>
+              <input
+                type="text"
+                value="0126_110220_00001120"
+                readonly
+                name="uniqueReferenceNumber"
+              />
+            </div>
+          </div>
+
+          <div class="inputContainerThree three">
+            <button type="button" class="accordion">
+              <span>Branch Info</span>
+              <i class="fa-sharp fa-solid fa-arrow-down"></i>
+            </button>
+            <div class="panel">
+              <div class="panelBox">
+                <label for=""
+                  >Branch Sol ID
+                  <span style="margin-left: 10px; color: red">*</span></label
+                >
+                <div class="panelBoxInput">
+                  <input
+                    type="text"
+                    placeholder="Branch Sol ID"
+                    name="branchSolID"
+                  />
+                </div>
+              </div>
+              <div class="panelBox">
+                <label for=""
+                  >TF Location Sol ID
+                  <span style="margin-left: 10px; color: red">*</span></label
+                >
+                <div class="panelBoxInput">
+                  <input
+                    type="text"
+                    placeholder="TF Location Sol ID"
+                    name="tfLocationSolID"
+                  />
+                </div>
+              </div>
+              <div class="panelBox">
+                <label for=""
+                  >CTPC Sol ID
+                  <span style="margin-left: 10px; color: red">*</span></label
+                >
+                <div class="panelBoxInput">
+                  <input
+                    type="text"
+                    placeholder="CTPC Sol ID"
+                    name="ctpcSolID"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputContainerTwo">
+            <button type="button" class="accordion">
+              <span>Product Information</span>
+              <i class="fa-sharp fa-solid fa-arrow-down"></i>
+            </button>
+            <div class="panel">
+              <div class="panelBox">
+                <label for=""
+                  >Product Category :<span style="margin-left: 10px; color: red"
+                    >*</span
+                  ></label
+                >
+                <select name="productCategory" id="productCategory">
+                  <option value="">Select your category</option>
+                  <option value="tradefinance">Trade Finance</option>
+                  <option value="iconnect">i-Connect</option>
+                  <option value="hr">Human Resource (HR)</option>
+                  <!-- <option value="swift">Swift</option> -->
+                  <option value="clms">GLMS</option>
+                </select>
+              </div>
+              <div class="panelBox">
+                <label for=""
+                  >Product Type :<span style="margin-left: 10px; color: red"
+                    >*</span
+                  ></label
+                >
+                <select name="productType" id="productCategory">
+                  <option value="">Select your type</option>
+                  <option value="tradefinance">BG AMENDMENT</option>
+                  <option value="tradefinance">BG SETTLE</option>
+                  <option value="tradefinance">BG WORKID</option>
+                  <option value="tradefinance">BG WORKID2</option>
+                  <option value="tradefinance">BG WORKID3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div id="departmentContainer"></div>
+          <div class="inputContainerThree">
+            <button type="button" class="accordion">
+              <span>Case Decision</span>
+              <i class="fa-sharp fa-solid fa-arrow-down"></i>
+            </button>
+            <div class="panel">
+              <!-- <div class="panelBox">
+                <label for="">Checker Name :</label>
+                <select name="checkerName" id="productCategory">
+                  <option value="">Select your category</option>
+                  <option value="tradefinance">Trade Finance</option>
+                  <option value="tradefinance">i-Connect</option>
+                  <option value="tradefinance">Human Resource (HR)</option>
+                  <option value="tradefinance">GLMS</option>
+                  <option value="tradefinance">CLMS</option>
+                </select>
+              </div> -->
+              <div class="panelBox">
+                <label for="">Assigned To :</label>
+                <select
+                  name="checkerId"
+                  id="productCategory"
+                  class="assignedTo"
+                >
+                  <option value="">Select your type</option>
+                </select>
+              </div>
+              <div class="panelBox">
+                <input
+                  style="display: none"
+                  type="text"
+                  id="checkerEmail"
+                  name="checkerEmail"
+                />
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="createWorkIdRight">
+          <div class="uploadLinksContainer">
+            <h3>Documents Uploaded :</h3>
+            <div class="linkcontainer">
+              <!-- <a href="" target="documentShow"><i></i><span>adb.pdf</span></a>
+              <a href="" target="documentShow"><i></i><span>adb.pdf</span></a>
+              <a href="" target="documentShow"> <i></i><span>adb.pdf</span></a>
+              <a href="" target="documentShow"><i></i><span>adb.pdf</span></a>
+              <a href="" target="documentShow"><i></i><span>adb.pdf</span></a> -->
+            </div>
+          </div>
+          <div>
+            <iframe
+              src=""
+              name="documentShow"
+              frameborder="0"
+              id="documentShow"
+            ></iframe>
+          </div>
+          <div class="submitButtonContainer">
+            <button type="submit" id="formButton">Submit</button>
+            <!-- <button type="submit" id="workidformbutton">Cancel</button> -->
+          </div>
+        </article>
+      </form>
+      <div class="loaderContainer">
+        <span class="loader"></span>
+      </div>
+    </aside>
+
+    <aside class="createWorkId" id="checkerWorkId" style="display: none">
+      <form class="createWorkIdSection" id="checkeridform"></form>
+      <div class="loaderContainer">
+        <span class="loader"></span>
+      </div>
+    </aside>
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="./dashboard.js"></script>
   </body>
 </html>

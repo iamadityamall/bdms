@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="formId">
+      <input type="text" name="fullName" />
+      <button type="submit">submit</button>
+    </form>
+    <script>
+      let formid = document.getElementById("formId");
+      console.log(formid);
+      formid.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let formdata = new FormData(this);
+        let js = Object.fromEntries(formdata);
+        console.log(js);
+      });
+    </script>
+  </body>
+</html>

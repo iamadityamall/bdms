@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="formTest">
+      <div style="display: none">
+        <input type="text" name="name" id="" />
+        <input type="file" name="fileOne" id="" />
+        <input type="file" name="fileTwo" id="" />
+      </div>
+      <button type="submit" id="testButton">submit</button>
+    </form>
+    <script>
+      const submit = document.getElementById("testButton");
+      const formTest = document.getElementById("formTest");
+
+      formTest.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        let formdata = new FormData(formTest);
+        let data = Object.fromEntries(formdata);
+        console.log(data);
+
+        let response = await fetch("http://localhost:9990/api/tf", {
+          method: "POST",
+          body: JSON.stringify(data),
+        });
+        let body = await response.json();
+        console.log(body);
+      });
+    </script>
+  </body>
+</html>

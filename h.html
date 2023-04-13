@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>i-BDMS Center</title>
+  <link rel="stylesheet" href="./dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <aside class="sidebarMenuContainer">
+    <nav class="companyLogo">
+      <figure>
+        <img src="./assests/images/idbi_intech_logo.jpg" alt="company-logo" />
+      </figure>
+    </nav>
+    <article class="profileSummary">
+      <figure>
+        <img src="./assests/images/profile-pic.jpg" alt="user-profile-pic" />
+      </figure>
+      <div class="profileSummary_headings">
+        <h3>Martha Brown</h3>
+        <h6>Marketing Director</h6>
+      </div>
+    </article>
+    <article class="sidemenuContainer">
+      <ul>
+        <li class="activeSidemenu">Dashboard</li>
+        <li>Insights</li>
+        <li>Reports</li>
+        <li>Channels</li>
+        <li>Settings</li>
+      </ul>
+    </article>
+    <footer class="buttonContainer">
+      <button type="button" onclick="alert('hello world')">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </button>
+    </footer>
+  </aside>
+  <main class="dashboardContainer">
+    <section class="ibdmsContainer">
+      <article class="ibdms">
+        <h2>Welcome Martha,</h2>
+        <h3>i-BDMS Center:</h3>
+        <span style="color: #02a793; font-weight: bold">Your documents are secured on blockchain</span>
+        <h6>Last Document Edited: <span>PDF.pdf</span></h6>
+        <h6>Last Document Edited on: <span>12/12/2022</span></h6>
+        <h6>Last Document Edited By: <span>John Doe</span></h6>
+        <h6>
+          Current Private Key: <span>922547e866c89b8f677312df0ccec8ee</span>
+        </h6>
+      </article>
+      <article class="dashboardContainer_gridButtons">
+        <button class="buttonOne button" id="createWorkIdButton" type="button">
+          Create Work ID
+        </button>
+        <button class="buttonTwo button" type="button">
+          Create workspace
+        </button>
+        <button class="buttonThree button" type="button">
+          Upload Document
+        </button>
+        <button class="buttonFour button" type="button">
+          Create agreement
+        </button>
+        <button class="buttonFive button" type="button">
+          Document pending for approval
+        </button>
+        <div class="searchDocumentContainer">
+          <input id="searchDocument" style="cursor: text" type="text" placeholder="Document Search" />
+          <button type="button" id="searchButton" onclick="alert('you clicked hello world')">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <section class="dashboardContainer_fileSystemExplorer">
+      <article class="col colOne">
+        <h2>Directories</h2>
+        <div class="colContainer colContainerOne">
+          <ul class="tree">
+            <li>
+              <details open>
+                <summary>
+                  <i class="fa-solid fa-folder"></i><span>Dummy</span>
+                </summary>
+                <ul class="margin-left" id="directories">
+                  <li>
+                    <i class="fa-solid fa-folder"></i><span>First Item</span>
+                  </li>
+                  <!-- <li>
+                      <details open>
+                        <summary>
+                          <i class="fa-solid fa-folder"></i
+                          ><span>Third tier</span>
+                        </summary>
+                        <ul class="margin-left">
+                          <li id="activeDirectory">
+                            <i class="fa-solid fa-folder"></i
+                            ><span>First Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Second Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Another Item</span>
+                          </li>
+                        </ul>
+                      </details>
+                    </li> -->
+                </ul>
+              </details>
+            </li>
+
+            <!-- <li>
+                <details open>
+                  <summary>
+                    <i class="fa-solid fa-folder"></i><span>Second Item</span>
+                  </summary>
+                  <ul class="margin-left">
+                    <li>
+                      <i class="fa-solid fa-folder"></i><span>First Item</span>
+                    </li>
+                    <li>
+                      <details open>
+                        <summary>
+                          <i class="fa-solid fa-folder"></i
+                          ><span>Third tier</span>
+                        </summary>
+                        <ul class="margin-left">
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>First Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Second Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Another Item</span>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li> -->
+          </ul>
+        </div>
+      </article>
+      <article class="col colTwo">
+        <h2>Work ID</h2>
+        <div class="colContainer colContainerOne">
+          <ul class="tree">
+            <li>
+              <details open>
+                <summary>
+                  <i class="fa-solid fa-folder"></i><span>Dummy</span>
+                </summary>
+                <ul class="margin-left" id="directories">
+                  <li>
+                    <i class="fa-solid fa-folder"></i><span>First Item</span>
+                  </li>
+                  <!-- <li>
+                      <details open>
+                        <summary>
+                          <i class="fa-solid fa-folder"></i
+                          ><span>Third tier</span>
+                        </summary>
+                        <ul class="margin-left">
+                          <li id="activeDirectory">
+                            <i class="fa-solid fa-folder"></i
+                            ><span>First Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Second Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Another Item</span>
+                          </li>
+                        </ul>
+                      </details>
+                    </li> -->
+                </ul>
+              </details>
+            </li>
+
+            <!-- <li>
+                <details open>
+                  <summary>
+                    <i class="fa-solid fa-folder"></i><span>Second Item</span>
+                  </summary>
+                  <ul class="margin-left">
+                    <li>
+                      <i class="fa-solid fa-folder"></i><span>First Item</span>
+                    </li>
+                    <li>
+                      <details open>
+                        <summary>
+                          <i class="fa-solid fa-folder"></i
+                          ><span>Third tier</span>
+                        </summary>
+                        <ul class="margin-left">
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>First Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Second Item</span>
+                          </li>
+                          <li>
+                            <i class="fa-solid fa-folder"></i
+                            ><span>Another Item</span>
+                          </li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li> -->
+          </ul>
+        </div>
+      </article>
+      <article class="col colThree">
+        <h2>Files</h2>
+        <div class="colContainer colContainerTwo">
+          <h6 id="emptyFolder">No files present</h6>
+          <ul id="files">
+            <!-- <li id="activeDirectory">
+                <i class="fa-solid fa-file-pdf"></i> <a href="">PDF.pdf</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-file-pdf"></i> <a href="">govmh43.pdf</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-file-pdf"></i>
+                <a href="">stamp_paper_aditya.pdf</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-file-pdf"></i> <a href="">PDF.pdf</a>
+              </li> -->
+          </ul>
+        </div>
+      </article>
+      <article class="col colFour">
+        <h2>Preview</h2>
+        <div class="colContainer colContainerThree">
+          <h4>File Name: <span id="fileNamePreview">PDF.pdf</span></h4>
+          <iframe id="preview" name="preview" src=""></iframe>
+        </div>
+      </article>
+    </section>
+  </main>
+  <aside class="createWorkId" id="createWorkId">
+    <form class="createWorkIdSection">
+      <button class="closeWorkIdSectionButton" id="closeWorkIdSectionButton">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <article class="createWorkIdLeft">
+        <div class="inputContainerOne">
+          <div class="box boxOne">
+            <label for="">Finacle Reference Number</label>
+            <input type="text" readonly />
+          </div>
+          <div class="box boxTwo">
+            <label for="">Registration Number</label>
+            <input type="text" value="TF-0000001004-IDBI" readonly />
+          </div>
+          <div class="box boxtThree">
+            <label for="">Unique Reference Number</label>
+            <input type="text" value="0126_110220_00001120" readonly />
+          </div>
+        </div>
+        <div class="inputContainerTwo">
+          <button type="button" class="accordion">
+            <span>Product Information</span>
+            <i class="fa-sharp fa-solid fa-arrow-down"></i>
+          </button>
+          <div class="panel">
+            <div class="panelBox">
+              <label for="">Product Category :</label>
+              <select name="" id="productCategory">
+                <option value="">Select your category</option>
+                <option value="tradefinance">Trade Finance</option>
+                <option value="tradefinance">i-Connect</option>
+                <option value="tradefinance">Human Resource (HR)</option>
+                <option value="tradefinance">GLMS</option>
+                <option value="tradefinance">CLMS</option>
+              </select>
+            </div>
+            <div class="panelBox">
+              <label for="">Product Type :</label>
+              <select name="" id="productCategory">
+                <option value="">Select your type</option>
+                <option value="tradefinance">BG AMENDMENT</option>
+                <option value="tradefinance">BG SETTLE</option>
+                <option value="tradefinance">BG WORKID</option>
+                <option value="tradefinance">BG WORKID2</option>
+                <option value="tradefinance">BG WORKID3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="inputContainerThree three">
+          <button type="button" class="accordion">
+            <span>Branch Info</span>
+            <i class="fa-sharp fa-solid fa-arrow-down"></i>
+          </button>
+          <div class="panel">
+            <div class="panelBox">
+              <label for="">Branch Sol ID <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="text" placeholder="Branch Sol ID">
+              </div>
+            </div>
+            <div class="panelBox">
+              <label for="">TF Location Sol ID <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="text" placeholder="TF Location Sol ID">
+              </div>
+            </div>
+            <div class="panelBox">
+              <label for="">CTPC Sol ID <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="text" placeholder="CTPC Sol ID">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="inputContainerThree">
+          <button type="button" class="accordion">
+            <span>Contact Information</span>
+            <i class="fa-sharp fa-solid fa-arrow-down"></i>
+          </button>
+
+          <div class="panel">
+            <div class="panelBox">
+              <label for="">Customer : <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="text" id="customer" required />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Beneficiary Title :</label>
+              <div class="panelBoxInput">
+                <input type="text" />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Beneficary Name : <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="text" id="beneficaryname" required />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Beneficary Name <span style="font-size: 10px;">(local language)</span> :</label>
+              <div class="panelBoxInput">
+                <input type="text" id="localname" />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Address Line 1 : <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="text" id="address" required />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">State LGD Code : <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="text" id="statelgd" required />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">District LGD Code : <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="text" id="districtlgd" required />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Block Code :</label>
+              <div class="panelBoxInput">
+                <input type="text" id="blockcode" />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Village Code :</label>
+              <div class="panelBoxInput">
+                <input type="text" id="villagecode" />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Country Code :</label>
+              <div class="panelBoxInput">
+                <input type="text" id="countrycode" />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Pin Code :</label>
+              <div class="panelBoxInput">
+                <input type="number" id="pin" />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Gender : <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <select name="" id="productCategory" required>
+                  <option value="">Select your category</option>
+                  <option value="tradefinance">Male</option>
+                  <option value="tradefinance">Female</option>
+                  <option value="tradefinance">Others</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Date Of Birth :</label>
+              <div class="panelBoxInput">
+                <input type="date" />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Mobile Number : <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="number" required maxlength="10" />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Email :</label>
+              <div class="panelBoxInput">
+                <input type="email" />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Bank Name : <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="text" required />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Bank ID(IFSC Code) : <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="number" required />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Bank Account Number : <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="number" required />
+              </div>
+            </div>
+
+            <div class="panelBox">
+              <label for="">Aadhar Number : <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="number" required maxlength="12" />
+              </div>
+            </div>
+
+            <br>
+
+            <div class="panelBox">
+              <label for="">Affidavit : <span style="color: red;">*</span></label>
+              <div class="panelBoxInput">
+                <input type="file" required />
+
+              </div>
+            </div>
+
+            <!-- <div class="panelBox">
+                <label for="" style="color: white
+                ">Affidavit : <span style="color: color;">*</span></label>
+                <div class="panelBoxInputnew" style="align-self: center; justify-self: center ; ;">
+                  <button type="submit" style="align-content: center; text-align: right !important;">upload</button>
+                </div>
+              </div> -->
+
+            <div class="panelBox">
+              <button type="button" onclick="alert('hello world')"
+                style="height: 2.2rem; width: 6rem; margin-top: 2rem;margin-left: 5rem; text-align: center; display: flow-root;">
+
+                <span>Upload</span>
+              </button>
+            </div>
+
+            <div class="panelBox">
+              <button type="submit"
+                style="height: 2.2rem; width: 6rem; margin-top: 2rem;margin-left: 5rem; text-align: center; display: flow-root;">
+
+                <span>submit</span>
+              </button>
+            </div>
+
+
+            <!-- <div class="panelBoxTwo" >
+                <label for="">Affidavit : <span style="color: red;">*</span></label>
+
+                <div class="ankita" style="display: grid; grid-template-columns: repeat(2,1fr);">
+                  
+                  <div class="panelBoxInputggg">
+                    <input type="file" />
+                  </div>
+                  <div class="buttonggf" style="padding: 10px;">
+                    <button type="submit">submit</button>
+                  </div>
+                </div>
+                
+              </div> -->
+
+          </div>
+
+        </div>
+        <div class="inputContainerThree">
+          <button type="button" class="accordion">
+            <span>Case Decision</span>
+            <i class="fa-sharp fa-solid fa-arrow-down"></i>
+          </button>
+          <div class="panel">
+            <div class="panelBox">
+              <label for="">Decision :</label>
+              <select name="" id="productCategory">
+                <option value="">Select your category</option>
+                <option value="tradefinance">Trade Finance</option>
+                <option value="tradefinance">i-Connect</option>
+                <option value="tradefinance">Human Resource (HR)</option>
+                <option value="tradefinance">GLMS</option>
+                <option value="tradefinance">CLMS</option>
+              </select>
+            </div>
+            <div class="panelBox">
+              <label for="">Reject :</label>
+              <select name="" id="productCategory">
+                <option value="">Select your type</option>
+                <option value="tradefinance">BG AMENDMENT</option>
+                <option value="tradefinance">BG SETTLE</option>
+                <option value="tradefinance">BG WORKID</option>
+                <option value="tradefinance">BG WORKID2</option>
+                <option value="tradefinance">BG WORKID3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="createWorkIdRight">
+        <div class="modalRightHeader">
+          <p>Submitted Documents: (Click to view pdf)</p>
+        </div>
+        <div class="modalRightDocumentsName">
+          <a th:href="${}">link text</a>
+          <!-- <input type="hidden" id="idp" name="idp" th:value="${policyNumber}" />
+          <link rel="stylesheet" th:href="@{assests/fonts/css/solid.css}" /> -->
+        </div>
+        <!-- <div class="modalRightDetails">
+          <iframe src="" name="iframe" id="iframe" frameborder="0" style="width: 100%; height: 100%"></iframe>
+        </div> -->
+
+      </article>
+    </form>
+  </aside>
+  <script src="./dashboard.js"></script>
+
+  <script>
+
+    const Customer = document.getElementById("customer");
+    const Beneficaryname = document.getElementById("beneficaryname");
+    const Statelgd = document.getElementById("statelgd");
+    const Localname = document.getElementById("localname");
+    const Address = document.getElementById("address");
+    const Districtlgd = document.getElementById("districtlgd");
+    const Blockcode = document.getElementById("blockcode");
+    const Villagecode = document.getElementById("villagecode");
+    const Countrycode = document.getElementById("countrycode");
+    const Pin = document.getElementById("pin");
+
+
+
+
+    Customer.addEventListener("keypress", function (e) {
+
+      var char = String.fromCharCode(e.which);
+      if (!/[a-zA-Z0-9]/.test(char)) {
+        e.preventDefault();
+        console.log("special Char");
+
+      }
+    });
+
+
+    Beneficaryname.addEventListener("keypress", function (e) {
+
+      var char = String.fromCharCode(e.which);
+      if (!/[a-zA-Z0-9]/.test(char)) {
+        e.preventDefault();
+        console.log("special Char");
+
+      }
+    });
+
+
+    Statelgd.addEventListener("keypress", function (e) {
+
+      var char = String.fromCharCode(e.which);
+      if (!/[a-zA-Z0-9]/.test(char)) {
+        e.preventDefault();
+        console.log("special Char");
+
+      }
+    });
+
+    Localname.addEventListener("keypress", function (e) {
+
+      var char = String.fromCharCode(e.which);
+      if (!/[a-zA-Z0-9]/.test(char)) {
+        e.preventDefault();
+        console.log("special Char");
+
+      }
+    });
+
+    Address.addEventListener("keypress", function (e) {
+
+      var char = String.fromCharCode(e.which);
+      if (!/[a-zA-Z0-9]/.test(char)) {
+        e.preventDefault();
+        console.log("special Char");
+
+      }
+    });
+
+    Districtlgd.addEventListener("keypress", function (e) {
+
+      var char = String.fromCharCode(e.which);
+      if (!/[a-zA-Z0-9]/.test(char)) {
+        e.preventDefault();
+        console.log("special Char");
+
+      }
+    });
+
+    Blockcode.addEventListener("keypress", function (e) {
+
+      var char = String.fromCharCode(e.which);
+      if (!/[a-zA-Z0-9]/.test(char)) {
+        e.preventDefault();
+        console.log("special Char");
+
+      }
+    });
+
+    Villagecode.addEventListener("keypress", function (e) {
+
+      var char = String.fromCharCode(e.which);
+      if (!/[a-zA-Z0-9]/.test(char)) {
+        e.preventDefault();
+        console.log("special Char");
+
+      }
+    });
+
+    Countrycode.addEventListener("keypress", function (e) {
+
+      var char = String.fromCharCode(e.which);
+      if (!/[a-zA-Z0-9]/.test(char)) {
+        e.preventDefault();
+        console.log("special Char");
+
+      }
+    });
+
+
+    Pin.addEventListener("keypress", function (e) {
+
+      var char = String.fromCharCode(e.which);
+      if (!/[a-zA-Z0-9]/.test(char)) {
+        e.preventDefault();
+        console.log("special Char");
+
+      }
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>
